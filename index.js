@@ -85,3 +85,11 @@ function roleQuestion() {
 
 function newEmployee() {inquirer.prompt(questions).then(roleQuestion)};
 
+const startPrompt = inquirer.prompt([
+    {
+        type: "list",
+        message: "Would you like to add a new employee, or create a team?",
+        name: "startResponse",
+        choices: ["New employee", "Create team"],
+    }
+])
